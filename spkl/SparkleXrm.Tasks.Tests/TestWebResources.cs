@@ -68,7 +68,7 @@ namespace SparkleXrm.Tasks.Tests
             CrmServiceClient crmSvc = new CrmServiceClient(ConfigurationManager.ConnectionStrings["integration_testing"].ConnectionString);
             var userId = crmSvc.GetMyCrmUserId();
             var trace = new TraceLogger();
-            var task = new DeployWebResourcesTask(crmSvc, trace);
+            var task = new DeployWebResourcesTask(crmSvc, trace, "1.0.0.0");
             var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
                  @"..\..\..");
 

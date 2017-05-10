@@ -15,8 +15,11 @@ namespace SparkleXrm.Tasks
 {
     public class DeployWebResourcesTask : BaseTask
     {
-        public DeployWebResourcesTask(IOrganizationService service, ITrace trace) : base(service, trace)
+        private string Version { get; set; }
+
+        public DeployWebResourcesTask(IOrganizationService service, ITrace trace, string version) : base(service, trace)
         {
+            Version = version;
         }
 
         protected override void ExecuteInternal(string folder, OrganizationServiceContext ctx)
@@ -70,7 +73,7 @@ namespace SparkleXrm.Tasks
                 // Update
                 webresource.Name = file.uniquename;
                 webresource.DisplayName = file.displayname;
-                webresource.Description = file.description;
+                webresource.Description = Version;//file.description;
                 webresource.Content = filecontent;
 
                 var webResourceFileInfo = new FileInfo(fullPath);

@@ -268,7 +268,7 @@ namespace SparkleXrmTask
 
                 case "webresources":
                     trace.WriteLine("Deploying WebResources");
-                    task = new DeployWebResourcesTask(service, trace);
+                    task = new DeployWebResourcesTask(service, trace, arguments.Version);                    
                     break;
 
                 case "instrument":

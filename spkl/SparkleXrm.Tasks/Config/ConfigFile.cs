@@ -140,17 +140,24 @@ namespace SparkleXrm.Tasks.Config
 
         public static List<string> GetAssemblies(ConfigFile config, PluginDeployConfig plugin)
         {
-            var assemblyPath = Path.Combine(config.filePath, plugin.assemblypath);
-            List<string> assemblies;
-            var extension = Path.GetExtension(assemblyPath);
-           
-            if (extension == "") assemblyPath = Path.Combine(assemblyPath, "*.dll");
-
-            var path = Path.GetDirectoryName(assemblyPath);
-            var file = Path.GetFileName(assemblyPath);
-            assemblies = DirectoryEx.Search(path, file, null);
-            return assemblies;
+            List<string> GetAssemblies(List<string> configAssemblies)
+            {
+                if (configAssemblies == null) return new List<string>();
+                var assemblies = new List<string>();
+                foreach (string assembly in configAssemblies)
+                {
+                    var assemblyPath = Path.Combine(config.filePath, assembly);
+                    var extension = Path.GetExtension(assemblyPath);
+                    if (extension == "") assemblyPath = Path.Combine(assemblyPath, "*.dll");
+                    var path = Path.GetDirectoryName(assemblyPath);
+                    var file = Path.GetFileName(assemblyPath);
+                    assemblies.AddRange(DirectoryEx.Search(path, file, null));
+                }
+                return assemblies;
+            }
+            var includeAssemblies = GetAssemblies(plugin.assemblies);
+            var excludeAssemblies = GetAssemblies(plugin.excludeassemblies);
+            return includeAssemblies.Except(excludeAssemblies).ToList();
         }
-
     }
 }

@@ -11,6 +11,7 @@ namespace SparkleXrm.Tasks.Config
         public string profile;
         public string solution;
         public string assemblypath;
-
+        public List<string> assemblies;
+        public List<string> excludeassemblies;
     }
 }

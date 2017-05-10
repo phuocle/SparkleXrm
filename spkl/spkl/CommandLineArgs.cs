@@ -36,5 +36,8 @@ get-webresources = Download webresources and match to the local files to create 
 
         [CommandLineParameter(Name = "Wait for keypress", Command = "w", Required = false, Description = "Optional wait for a key press at the end of task run")]
         public bool WaitForKey { get; set; }
+        
+		[CommandLineParameter(Name = "Version", Command = "v", Required = false, Description = "Dynamics 365 Version")]
+        public string Version { get; set; }
     }
 }
