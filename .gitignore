@@ -133,3 +133,4 @@ UpgradeLog*.XML
 /spkl/spkl/Package/spkl.json20170508195359.bak
 /spkl/spkl/Package/spkl.json20170508194815.bak
 /.vs
+/spkl/.vs/spkl/v15/sqlite3
