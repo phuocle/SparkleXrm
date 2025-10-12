@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29728.190
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11109.219 d18.0-oob
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SparkleXrm.Tasks", "SparkleXrm.Tasks\SparkleXrm.Tasks.csproj", "{439FFD12-81E6-41DD-8AED-35A526051D45}"
 EndProject
@@ -31,6 +31,25 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Webresources", "Webresource
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "3139"
+		StartServerOnDebug = "false"
+	EndProjectSection
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_3139"
+		Debug.AspNetCompiler.PhysicalPath = "Webresources\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3139\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_3139"
+		Release.AspNetCompiler.PhysicalPath = "Webresources\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3139\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "3139"
 		SlnRelativePath = "Webresources\"
 		StartServerOnDebug = "false"
 	EndProjectSection
@@ -38,8 +57,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spkl", "spkl\spkl.csproj", "{CADC1BD4-46B5-46D9-B2CC-28482B7B90C5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrmSvcUtil.FilteringService", "CrmSvcUtilFilteringService\CrmSvcUtil.FilteringService.csproj", "{EA2B393E-2C0E-4F80-A44C-712877A04870}"
-EndProject
-Project("{F5034706-568F-408A-B7B3-4D38C6DB8A32}") = "BuildTasks", "BuildTasks\BuildTasks.pssproj", "{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPluginWorkflowCombined", "TestPluginWorkflowCombined\TestPluginWorkflowCombined.csproj", "{147A132A-D2FF-46FA-8EBA-132BBB3DA405}"
 EndProject
@@ -107,14 +124,6 @@ Global
 		{EA2B393E-2C0E-4F80-A44C-712877A04870}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EA2B393E-2C0E-4F80-A44C-712877A04870}.Release|x86.ActiveCfg = Release|x86
 		{EA2B393E-2C0E-4F80-A44C-712877A04870}.Release|x86.Build.0 = Release|x86
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Debug|x86.Build.0 = Debug|Any CPU
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|x86.ActiveCfg = Release|Any CPU
-		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|x86.Build.0 = Release|Any CPU
 		{147A132A-D2FF-46FA-8EBA-132BBB3DA405}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{147A132A-D2FF-46FA-8EBA-132BBB3DA405}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{147A132A-D2FF-46FA-8EBA-132BBB3DA405}.Debug|x86.ActiveCfg = Debug|Any CPU
